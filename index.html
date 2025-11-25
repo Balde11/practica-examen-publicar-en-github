@@ -4,32 +4,77 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>Mi experimento CSS + Git</title>
+
     <style>
-	body {
-	background-color: violet;
-}   
-   h1 {
+      body {
+        background-color: violet;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      h1 {
         color: white;
         background-color: green;
         border: 1px solid black;
-	font-size: 64px;
+        font-size: 64px;
+        text-align: center;
+      }
+
+      h2 {
+        font-size: 48px;
+        color: white;
+        text-align: center;
       }
 
       p {
         color: aliceblue;
         background-color: rgb(150, 44, 248);
         border: 3px black solid;
-        font-size: 64px;
+        font-size: 48px;
+        padding: 10px;
+        text-align: center;
+      }
+
+      footer {
+        margin-top: 50px;
+        text-align: center;
+        font-size: 32px;
+        color: black;
+      }
+
+      /* Mascota ASCII */
+      #pet {
+        position: absolute;
+        font-size: 32px;
+        pointer-events: none; /* Para que no moleste al ratón */
       }
     </style>
   </head>
+
   <body>
     <h1>HOLA Git XD !</h1>
     <p>Este es mi primer ej. con CSS y Git</p>
 
     <h2>Subtítulo</h2>
     <p>Segundo elemento de parrafo</p>
-	<h1> !HALA MADRI!</h1>
-<footer> Este es el pie de página ~ Año 2005 </footer>
+
+    <h1>¡HALA MADRID!</h1>
+
+    <footer>Este es el pie de página ~ Año 2005</footer>
+
+    <!-- Mascota ASCII -->
+    <pre id="pet">(^_^)</pre>
+
+    <script>
+      const pet = document.getElementById("pet");
+
+      document.addEventListener("mousemove", (e) => {
+        pet.style.left = e.pageX + 10 + "px";
+        pet.style.top = e.pageY + 10 + "px";
+      });
+    </script>
+
   </body>
 </html>
+
